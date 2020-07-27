@@ -39,5 +39,6 @@ int main(){
 	cout<<"\nStrings (Names) in alphabetical order : \n";
 	for(i=0; i<5; i++){
 		cout<<str[i]<<"\n";
+		out << str[i] << "\n";
 	}
 }
