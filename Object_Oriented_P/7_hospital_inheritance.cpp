@@ -41,7 +41,7 @@ class pediatric_patient:public hospital{
 				cout<<"Enter the name of vaccine to be given \n";
 				cin>>vaccine;
 			}
-		
+
 			void put(){
 				if(age<12){
 					display();

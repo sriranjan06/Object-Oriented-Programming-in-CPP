@@ -16,7 +16,7 @@ int count::counter = 0;					//init counter to 0
 
 void f(){
 	count temp;
-	cout<<"\nObjects in existence: ";
+	cout<<"\nObjects in existence f(): ";
 	cout<<temp.counter<<endl;
 }
 

@@ -1,19 +1,22 @@
 #include<iostream>
 using namespace std;
 
-inline int greatest(int a, int b, int c){
-	if(a>b && a>c)
-		return a;
-	else if(b>a && b>c)
-		return b;
-	else
-		return c;
+inline int greatest(int a[]){
+	int i, max = 0;
+	for (i = 0; i < 3; i++) {
+		if (a[i] > max) {
+			max = a[i];
+		}
+	}
+	return max;
 }
 
 int main(){
-	int x, y, z;
+	int i, x[3];
 	cout<<"\nEnter three numbers:\n";
-	cin>>x>>y>>z;
-	cout<<"\nGreatest number is "<<greatest(x,y,z)<<endl;
+	for (i = 0; i < 3; i++) {
+		cin >> x[i];
+	}
+	cout<<"\nGreatest number is "<<greatest(x)<<"\n";
 	return 0;
 }
