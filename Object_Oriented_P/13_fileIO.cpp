@@ -10,7 +10,7 @@ struct account_holder{
 
 int main(){	
 	int n,i;
-	cout<<"Enter no. of account holders \n";
+	cout<<"Enter no. of account holders: \n";
 	cin>>n;
 	struct account_holder b[10];
 	struct account_holder c[10];
@@ -24,7 +24,7 @@ int main(){
 	for(i=0;i<n;i++){
 		cout<<"enter a/c no.,name & bal of customer : "<<i+1<<"\n";
 		cin>>b[i].acc>>b[i].name>>b[i].bal;
-		op.write((char *)&b[i],sizeof(struct account_holder));
+		op.write((char *) &b[i], sizeof(struct account_holder));
 	}
 	op.close();
 	
@@ -36,10 +36,10 @@ int main(){
 
 	for(i=0;i<n;i++){
 		if(ip){
-			ip.read((char *)&c[i],sizeof(struct account_holder));
-			cout<<"A/c no : "<<c[i].acc<<"\n";
+			ip.read((char *) &c[i], sizeof(struct account_holder));
+			cout<<"\n\nA/c no : "<<c[i].acc<<"\n";
 			cout<<"Name : "<<c[i].name<<"\n";
-			cout<<"Balance (in INR) : "<<c[i].bal<<"\n";
+			cout<<"Balance : "<<c[i].bal<<"\n";
 		}
 	}
 	ip.close();
